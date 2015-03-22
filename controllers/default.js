@@ -39,10 +39,10 @@ var dateFormat = require('../definitions/dateFormat.js');
 var mysql = require('mysql');
 var pool = mysql.createPool({
      connectionLimit: 66,
-     host: 'ij7e5czyh3w3y8wi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-     user: 'idoq3rx6sjeiuhug',
-     password: '1tb8p79l5d9s369b',
-     database: 'heroku_a51eb7bde86a983'
+     host: 'myhost',
+     user: 'username',
+     password: 'pass',
+     database: 'db'
 });
 var query = Q.nbind(pool.query, pool);
 
