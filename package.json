@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "total": "1.7.2-1",
+    "total": "1.7.2",
     "mysql": "^2.5.4",
     "plotly": "1.0.2",
     "q": "1.2.0",
