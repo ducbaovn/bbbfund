@@ -1,0 +1,64 @@
+<h2 align="center">Bảng Theo Dõi Điện Tử</h2>
+<table border="1" style="width:100%">
+    <thead>
+        <tr class="main-header-row">
+            <th data-header-name="symbol" rowspan="2" width="60"><span class="text-bold">Mã CK</span></th>
+            <th data-header-name="priorClosePrice" rowspan="2" class="highlight"><span class="text-bold">ĐCGN</span></th>
+            <th data-header-name="ceiling" rowspan="2" class="highlight"><span class="text-bold">Trần</span></th>
+            <th data-header-name="floor" rowspan="2" class="highlight"><span class="text-bold">Sàn</span></th>
+            <th data-header-name="ask" colspan="6"><span class="text-bold">Dư mua</span></th>
+            <th data-header-name="matching" class="highlight" colspan="3"><span class="text-bold">Khớp lệnh</span></th>
+            <th data-header-name="buy" colspan="6"><span class="text-bold">Dư bán</span></th>
+            <th style="display: none;" data-header-name="openPrice" class="highlight" rowspan="2"><span class="text-bold">Mở cửa</span></th>
+            <th style="display: none;" data-header-name="highest" class="highlight" rowspan="2"><span class="text-bold">Cao nhất</span></th>
+            <th style="display: none;" data-header-name="lowest" class="highlight" rowspan="2"><span class="text-bold">Thấp nhất</span></th>
+            <th data-header-name="totalShare" rowspan="2" width="4%"><span class="text-bold">TKL đã khớp</span></th>
+            <th style="display: none;" data-header-name="totalValue" rowspan="2" width="5%"><span class="text-bold">TGT đã khớp</span></th>
+            <th style="display: none;" data-header-name="fcr" rowspan="2" width="3%"><span class="text-bold">KL NN mua</span></th>
+            <th style="display: none;" data-header-name="currentRoom" rowspan="2" width="5%"><span class="text-bold">Room NN</span></th>
+            <th style="display: none;" data-header-name="totalRoom" rowspan="2" width="5%"><span class="text-bold">Tổng Room NN</span></th>
+        </tr>
+        <tr class="sub-header-row">
+            <th data-header-name="best3Bid" data-header-parent="ask">Giá 3</th>
+            <th data-header-name="best3BidVolume" data-header-parent="ask">KL 3</th>
+            <th data-header-name="best2Bid" data-header-parent="ask">Giá 2</th>
+            <th data-header-name="best2BidVolume" data-header-parent="ask">KL 2</th>
+            <th data-header-name="best1Bid" data-header-parent="ask"><span class="display-inline-block vertical-align-middle">Giá 1</span><span class="sprite-hose sort-icon vertical-align-middle"></span></th>
+            <th data-header-name="best1Volume" data-header-parent="ask"><span class="display-inline-block vertical-align-middle">KL 1</span><span class="sprite-hose sort-icon vertical-align-middle"></span></th>
+            <th data-header-name="dealPrice" data-header-parent="matching" class="highlight"><span class="display-inline-block vertical-align-middle">Giá khớp</span><span class="sprite-hose sort-icon vertical-align-middle"></span></th>
+            <th data-header-name="dealVolume" data-header-parent="matching" class="highlight"><span class="display-inline-block vertical-align-middle">KLTH</span><span class="sprite-hose sort-icon vertical-align-middle"></span></th>
+            <th data-header-name="priceStatus" data-header-parent="matching" class="highlight"><span class="display-inline-block vertical-align-middle">+/-</span><span class="sprite-hose sort-icon vertical-align-middle"></span></th>
+            <th style="display: none;" data-header-name="priceStatusRatio" data-header-parent="matching" class="highlight"><span class="display-inline-block vertical-align-middle">%</span><span class="sprite-hose sort-icon vertical-align-middle"></span></th>
+            <th data-header-name="best1Offer" data-header-parent="buy"><span class="display-inline-block vertical-align-middle">Giá 1</span><span class="sprite-hose sort-icon vertical-align-middle"></span></th>
+            <th data-header-name="best1OfferVolume" data-header-parent="buy"><span class="display-inline-block vertical-align-middle">KL 1</span><span class="sprite-hose sort-icon vertical-align-middle"></span></th>
+            <th data-header-name="best2Offer" data-header-parent="buy">Giá 2</th>
+            <th data-header-name="best2OfferVolume" data-header-parent="buy">KL 2</th>
+            <th data-header-name="best3Offer" data-header-parent="buy">Giá 3</th>
+            <th data-header-name="best3OfferVolume" data-header-parent="buy">KL 3</th>
+        </tr>
+    </thead>
+    @{foreach coPhieu in model.bang1}
+        <tr>
+            <td data-property="symbol" class="stock-code" abbr="HAG" style="color: darkblue" align="center">@{coPhieu[0]}</td>
+            <td data-property="priorClosePrice" class="highlight" abbr="" style="color: red" align="right">@{coPhieu[1]}</td>
+            <td data-property="ceiling" class="highlight" abbr="" style="color: magenta" align="right">@{coPhieu[2]}</td>
+            <td data-property="floor" class="highlight" abbr="" style="color: darkTurquoise" align="right">@{coPhieu[3]}</td>
+            <td data-property="best3Bid" abbr="" style="color: darkblue" align="right">@{coPhieu[4]}</td>
+            <td data-property="best3BidVolume" abbr="" style="color: darkblue" align="right">@{coPhieu[5]}</td>
+            <td data-property="best2Bid" abbr="" style="color: darkblue" align="right">@{coPhieu[6]}</td>
+            <td data-property="best2BidVolume" abbr="" style="color: darkblue" align="right">@{coPhieu[7]}</td>
+            <td data-property="best1Bid" abbr="22600" style="color: darkblue" align="right">@{coPhieu[8]}</td>
+            <td data-property="best1BidVolume" abbr="136420" style="color: darkblue" align="right">@{coPhieu[9]}</td>
+            <td data-property="dealPrice" class="highlight" abbr="22700" style="color: red" align="right">@{coPhieu[10]}</td>
+            <td data-property="dealVolume" class="highlight" abbr="200" style="color: red" align="right">@{coPhieu[11]}</td>
+            <td data-property="priceStatus" class="highlight" abbr="-300" style="color: red" align="right">@{parseFloat(coPhieu[10] - coPhieu[1]).toFixed(2)}</td>
+            <td data-property="best1Offer" abbr="22700" style="color: darkblue" align="right">@{coPhieu[12]}</td>
+            <td data-property="best1OfferVolume" abbr="41160" style="color: darkblue" align="right">@{coPhieu[13]}</td>
+            <td data-property="best2Offer" abbr="" style="color: darkblue" align="right">@{coPhieu[14]}</td>
+            <td data-property="best2OfferVolume" abbr="" style="color: darkblue" align="right">@{coPhieu[15]}</td>
+            <td data-property="best3Offer" abbr="" style="color: darkblue" align="right">@{coPhieu[16]}</td>
+            <td data-property="best3OfferVolume" abbr="" style="color: darkblue" align="right">@{coPhieu[17]}</td>
+            <td data-property="totalShare" abbr="" style="color: darkblue" align="right">---</td>
+        </tr>
+    @{end}
+</table>

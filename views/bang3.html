@@ -1,0 +1,21 @@
+<h2 align="center">So Sánh Với VNIndex (gốc 100 điểm)</h2>
+<table style="width:100%" border="1" align="center">
+    <tr>
+        <th></th>
+        <th>BBB</th>
+        <th>VN</th>
+        <th>VN30</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold" align="center">Index</td>
+        <td  align="right">@{model.bang3.BBBIndex}</td>
+        <td  align="right">@{(model.bang3.VNIndex / 574.3 * 100).toFixed(3)}</td>
+        <td  align="right">@{(model.bang3.VN30Index / 615.7 * 100).toFixed(3)}</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold" align="center">%Thay đổi trong ngày</td>
+        <td align="right">@{model.bang3.phanTramBBB.toFixed(2)}%</td>
+        <td align="right">@{model.bang3.phanTramVN.toFixed(2)}%</td>
+        <td align="right">@{model.bang3.phanTramVN30.toFixed(2)}%</td>
+    </tr>
+</table>

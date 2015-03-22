@@ -1,0 +1,70 @@
+<style>
+    #section{width:60%; margin-left:auto; margin-right:auto}
+    #bang2{width:50%; float:left}
+    #bang3{width:45%; float:right}
+</style>
+<script>
+        var maCP=document.getElementsByName("maCP")[0];
+        var soLuong=document.getElementsByName("soLuong")[0];
+        var gia=document.getElementsByName("gia")[0];
+        var tienMat=document.getElementsByName("tienMat")[0];
+        function mua(){
+            var tong=Math.ceil(soLuong.value*gia.value*1.0035);
+            alert("Mua "+soLuong.value+" CP "+maCP.value+" giá "+gia.value+". Tổng giá Mua là"+tong);
+        }
+        function ban(){
+            var tong=Math.ceil(soLuong.value*gia.value*0.9955);
+            alert("Bán "+soLuong.value+" CP "+maCP.value+" giá "+gia.value+". Tổng giá Bán là"+tong);
+        }
+        function gui(){
+            alert("Gửi "+tienMat.value+" vào tài khoản");
+        }
+        function rut(){
+            alert("Rút "+tienMat.value+" từ tài khoản");
+        }
+        function nhan(){
+            alert("Nhận cổ tức "+tienMat.value+" vào tài khoản");
+        }
+</script>
+<div id="section">@{view('bang2', model)}</div>
+<form action="/admin" method="get">
+    <div id="bang2">
+        <h2 align="center">Giao Dịch Cổ Phiếu</h2>
+        <table border="1" align="center">
+            <tr>
+                <th style="width:10%">Mã CK</th>
+                <th style="width:10%">Sàn GD</th>
+                <th style="width:25%">Số Lượng</th>
+                <th style="width:25%">Giá</th>
+                <th style="width:10%">Mua</th>
+                <th style="width:10%">Bán</th>
+            </tr>
+            <tr>
+                <td align="center"><input type="text" name="maCP" style="width:90%"></td>
+                <td align="center"><input type="text" name="maSan" style="width:90%"></td>
+                <td align="center"><input type="text" name="soLuong" style="width:90%"></td>
+                <td align="center"><input type="text" name="gia" style="width:90%"></td>
+                <td align="center"><input type="submit" onclick="mua()" name="submit" value="Mua"></td>
+                <td align="center"><input type="submit" onclick="ban()" name="submit" value="Bán"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="bang3">
+        <h2 align="center">Giao Dịch Tiền Mặt</h2>
+        <table border="1" style="width:100%" align="center">
+            <tr>
+                <th style="width:40%">Tiền Mặt</th>
+                <th style="width:18%">Gửi Tiền</th>
+                <th style="width:18%">Rút Tiền</th>
+                <th style="width:24%">Nhận Cổ Tức</th>
+            </tr>
+            <tr>
+                <td align="center"><input type="text" name="tienMat" style="width:90%"></td>
+                <td align="center"><input type="submit" onclick="gui()" name="submit" value="Gửi"></td>
+                <td align="center"><input type="submit" onclick="rut()" name="submit" value="Rút"></td>
+                <td align="center"><input type="submit" onclick="nhan()" name="submit" value="Nhận"></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<br><br><br><br><br><br><br><div align="center"><a href="/"><button type="button">DONE</button></a></div>

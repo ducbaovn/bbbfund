@@ -1,0 +1,45 @@
+<h2 align="center">Quỹ Đầu Tư BBB</h2>
+<table border="1" style="width:100%" align="center">
+    <tr>
+        <th width="40">STT</th>
+        <th width="60">Mã CK</th>
+        <th width="100">Nắm Giữ</th>
+        <th width="100">% Phân bổ</th>
+        <th width="100">Giá mua</th>
+        <th width="100">Giá hiện tại</th>
+        <th width="100">% Lợi nhuận</th>
+        <th width="100">Giá trị</th>
+    </tr>
+    @{foreach coPhieu in model.bang2.bangCP}
+    <tr>
+        <td align="center">@{index+1}</td>
+        <td align="center">@{coPhieu.MA_CP}</td>
+        <td align="right">@{coPhieu.SO_LUONG}</td>
+        <td align="right">@{coPhieu.phanBo.toFixed(2)}%</td>
+        <td align="right">@{coPhieu.GIA_MUA}</td>
+        <td align="right">@{coPhieu.GIA}</td>
+        <td align="right">@{coPhieu.phanTram.toFixed(2)}</td>
+        <td align="right">@{numberWithCommas(coPhieu.giaTri*1000)}</td>
+    </tr>
+    @{end}
+    <tr>
+        <td colspan="6" style="font-weight:bold" align="center">Tổng Vốn Cổ Phiếu</td>
+        <td colspan="2" style="font-weight:bold" align="right">@{numberWithCommas(model.bang2.vonCP*1000)}</td>
+    </tr>
+    <tr>
+        <td colspan="6" style="font-weight:bold" align="center">Tổng Giá Trị Hiện Tại</td>
+        <td colspan="2" style="font-weight:bold" align="right">@{numberWithCommas(model.bang2.tongGia*1000)}</td>
+    </tr>
+    <tr>
+        <td colspan="6" style="font-weight:bold" align="center">Tiền Mặt</td>
+        <td colspan="2" style="font-weight:bold" align="right">@{numberWithCommas(model.bang2.tienMat*1000)}</td>
+    </tr>
+    <tr>
+        <td colspan="6" style="font-weight:bold" align="center">Tổng Lợi Nhuận CP</td>
+        <td colspan="2" style="font-weight:bold" align="right">@{numberWithCommas(model.bang2.loiNhuan*1000)}</td>
+    </tr>
+    <tr>
+        <td colspan="6" style="font-weight:bold" align="center">% Tổng Lợi Nhuận CP</td>
+        <td colspan="2" style="font-weight:bold" align="right">@{model.bang2.phanTramLoiNhuan.toFixed(2)}%</td>
+    </tr>
+</table>

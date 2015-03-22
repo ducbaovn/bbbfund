@@ -1,0 +1,27 @@
+{
+  "name": "bbbfund",
+  "version": "0.0.1",
+  "description": "Website for tracking BBB Fund",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "total": "1.7.2-1",
+    "mysql": "^2.5.4",
+    "plotly": "1.0.2",
+    "q": "1.2.0",
+    "request":"2.53.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": "https://github.com/ducbaovn/bbbfund.git",
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "ducbaovn",
+  "author": "ducbaovn"
+}
